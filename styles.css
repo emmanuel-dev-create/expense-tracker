@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: hsla(115, 78%, 77%, 0.779); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/*The Main Card */
+.main-container {
+    background-color: white;
+    width: 90%;
+    max-width: 450px;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Very soft shadow */
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+/*The Spent Display */
+#spentAmountDisplay {
+    text-align: center;
+    color: #2d3436;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+/*The Form Layout */
+/* #expense-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+} */
+
+input, select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+select > option{
+    padding: 10px;
+    border-radius: 5px;
+}
+input:focus {
+    border-color: #00b894; /* Professional green */
+}
+
+/*The Save Button */
+button{
+    background-color: #00b894;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover{
+    background-color: #00a383;
+}
+
+/*The List Items*/
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #00b894;
+    border-radius: 4px;
+}

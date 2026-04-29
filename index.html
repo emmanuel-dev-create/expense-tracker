@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form class="main-container">
+         <h3 id="spentAmountDisplay">Spent: </h3>
+         <input type="text" placeholder="Description">
+         <input type="number" placeholder="Expense Amount">
+
+         <select name="category" id="category">
+            <option value="Transport" id="transport">Transport</option>
+            <option value="Food" id="food">Food</option>
+            <option value="Entertainment" id="entertainment">Entertainment</option>
+            <option value="Rent" id="rent">Rent</option>
+         </select>
+
+         <div id="expenseList"></div>
+         
+         <button>Save Expanse</button>
+    </form>
+</body>
+</html>
