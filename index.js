@@ -34,12 +34,15 @@ function renderExpenses() {
 
         expenseDiv.innerHTML = `
             <span>${item.description} (${item.category})</span>
-            <strong>${item.amount} KES</strong>
+            <div>
+                <strong>${item.amount} KES</strong>
+                <button onclick="deleteExpense(${item.id})" style="margin-left: 10px; color: red; cursor: pointer;">Delete</button>
+            </div>
         `;
 
         expenseList.appendChild(expenseDiv);
-        updateTotal();
     });
+    updateTotal()
 }
 
 // TOTAL SPENT
@@ -55,4 +58,10 @@ function updateTotal(){
 function saveToLocal(){
     localStorage.setItem('myExpenses', JSON.stringify(expenses))
 }
+function deleteExpense(idToDelete){
+    expenses = expenses.filter(item => item.id !== idToDelete);
+    saveToLocal()
+    renderExpenses()
+}
+
 renderExpenses()

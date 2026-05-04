@@ -53,6 +53,7 @@ input, select {
 select > option{
     padding: 10px;
     border-radius: 5px;
+    background-color: hsla(168, 100%, 32%, 0.801);
 }
 input:focus {
     border-color: #00b894; /* Professional green */
